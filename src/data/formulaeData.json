@@ -1,0 +1,20 @@
+[
+    {
+        "formulaUid": 0,
+        "formulaValue": "Qp = 19.1(Hw)^1.85",
+        "formulaName": "U.S. Bureau of Reclamation (1982)",
+        "datasetPath": "bureauOfReclamationData"
+    },
+    {
+        "formulaUid": 1,
+        "formulaValue": "Qp = 1.154(Vw * Hw)^0.412",
+        "formulaName": "MacDonald & Langridge (1984) 412",
+        "datasetPath": "macDonaldLangridge"
+    },
+    {
+        "formulaUid": 2,
+        "formulaValue": "Qp = 3.85(Vw * Hw)^0.411",
+        "formulaName": "MacDonald and Langridge (1984) 411",
+        "datasetPath": "macDonaldLangridge"
+    }
+]

@@ -1,0 +1,24 @@
+<nav>
+
+    <div id="breach-formula-calculator">
+        <h4>Calculator</h4>
+        
+            <div class="form-group">
+                <label for="x">Parameter 1</label>
+                <input id="x" class="form-control" placeholder="Parameter 1" />
+                <label for="y">Parameter 2</label>
+                <input id="y" class="form-control" placeholder="Parameter 2" />
+                <button id="calculateFormula" class="btn btn-primary" (click)="onCalculateFormula()">Add DataPoint</button>
+            </div>
+        
+    </div>
+
+    <div id="breach-formula-list">
+        <h4>Datasets</h4>
+        <ul class="nav flex-column">
+            <li *ngFor="let formula of formulae">
+                <a href="#" (click)="onSelectionChange(formula)">{{ formula.formulaName }}</a>
+            </li>
+        </ul>
+    </div>
+</nav>
