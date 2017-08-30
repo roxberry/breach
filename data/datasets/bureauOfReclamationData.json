@@ -1,0 +1,122 @@
+{"datasets": [
+    {
+        "label": "U.S. Bureau Of Reclamation (1982)",
+        "data": [
+            {
+                "x": 1,
+                "y": 0.448257488,
+                "dam": "Apishapa, Colorado"
+            },
+            {
+                "x": 2,
+                "y": -0.278724207,
+                "dam": "Baldwin Hills, California"
+            },
+            {
+                "x": 3,
+                "y": -0.515783455,
+                "dam": "Buffalo Creek, West Virginia"
+            },
+            {
+                "x": 4,
+                "y": -0.104880758,
+                "dam": "Castlewood, Colorado"
+            },
+            {
+                "x": 5,
+                "y": -0.910882202,
+                "dam": "Otto Run, Johnstown, PA"
+            },
+            {
+                "x": 6,
+                "y": -0.768646653,
+                "dam": "French Landing, Michigan"
+            },
+            {
+                "x": 7,
+                "y": 0.13217849,
+                "dam": "Granite Creek, Alaska"
+            },
+            {
+                "x": 8,
+                "y": -0.389351856,
+                "dam": "Hatchtown, Utah"
+            },
+            {
+                "x": 9,
+                "y": 0.369237738,
+                "dam": "Hell Hole, California"
+            },
+            {
+                "x": 10,
+                "y": -0.689626904,
+                "dam": "Kelly Barnes, Georgia"
+            },
+            {
+                "x": 11,
+                "y": -0.547391355,
+                "dam": "Laurel Run, Pennsylvania"
+            },
+            {
+                "x": 12,
+                "y": -0.104880758,
+                "dam": "Little Deer Creek, Utah"
+            },
+            {
+                "x": 13,
+                "y": -0.642215054,
+                "dam": "Lower Two Medicine, Montana"
+            },
+            {
+                "x": 14,
+                "y": 0.622100936,
+                "dam": "Oros, Brazil"
+            },
+            {
+                "x": 15,
+                "y": -0.768646653,
+                "dam": "Sandy Run, Pennsylvania"
+            },
+            {
+                "x": 16,
+                "y": 0.211198239,
+                "dam": "Schaeffer, Colorado"
+            },
+            {
+                "x": 17,
+                "y": -1.116333551,
+                "dam": "South Fork Tributary, Pennsylvania"
+            },
+            {
+                "x": 18,
+                "y": 1.270062881,
+                "dam": "Swift, Montana"
+            },
+            {
+                "x": 19,
+                "y": -0.926686152,
+                "dam": "North Branch Tributary, Johnstown"
+            },
+            {
+                "x": 20,
+                "y": 3.134928967,
+                "dam": "Teton, Idaho"
+            },
+            {
+                "x": 21,
+                "y": -0.136488658,
+                "dam": "Austin, Texas"
+            },
+            {
+                "x": 22,
+                "y": 1.712573478,
+                "dam": "St. Francis, CA"
+            }
+        ],
+        "showLine": false,
+        "pointStyle": "circle",
+        "pointRadius": 5,
+        "pointBackgroundColor": "rgb(0, 204, 0)",
+        "borderColor": "rgb(0, 204, 0)"
+    }
+]}

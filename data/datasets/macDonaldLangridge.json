@@ -1,0 +1,129 @@
+{
+    "datasets": [
+        {
+            "label": "MacDonald and Langridge-Monopolis (1984)",
+            "data": [
+                {
+                    "x": -0.211928654,
+                    "y": 0.470019282,
+                    "dam": "Apishapa, Colorado"
+                },
+                {
+                    "x": -0.356915359,
+                    "y": -0.445285402,
+                    "dam": "Baldwin Hills, California"
+                },
+                {
+                    "x": -0.359816455,
+                    "y": -0.339851571,
+                    "dam": "Buffalo Creek, West Virginia"
+                },
+                {
+                    "x": -0.321094313,
+                    "y": 0.099262954,
+                    "dam": "Castlewood, Colorado"
+                },
+                {
+                    "x": 0.031872381,
+                    "y": -0.481202421,
+                    "dam": "Davis Reservoir, California"
+                },
+                {
+                    "x": -0.336757508,
+                    "y": -0.657890983,
+                    "dam": "French Landing, Michigan"
+                },
+                {
+                    "x": -0.254151179,
+                    "y": -0.526388349,
+                    "dam": "Frenchman Creek, Montana"
+                },
+                {
+                    "x": -0.290925637,
+                    "y": -1.072674625,
+                    "dam": "Goose Creek, South Carolina"
+                },
+                {
+                    "x": -0.262323281,
+                    "y": -0.178804291,
+                    "dam": "Hatchtown, Utah"
+                },
+                {
+                    "x": -0.154723942,
+                    "y": 0.881327083,
+                    "dam": "Hell Hole, California"
+                },
+                {
+                    "x": -0.234401934,
+                    "y": 0.273054983,
+                    "dam": "Johnstown (South Fork Dam, Penn.) "
+                },
+                {
+                    "x": -0.3578211,
+                    "y": -0.49742301,
+                    "dam": "Kelly Barnes, Georgia"
+                },
+                {
+                    "x": -0.359332939,
+                    "y": -0.335217117,
+                    "dam": "Laurel Run, Pennsylvania"
+                },
+                {
+                    "x": -0.353850821,
+                    "y": 0.174572833,
+                    "dam": "Little Deer Creek, Utah"
+                },
+                {
+                    "x": -0.161534026,
+                    "y": -0.49742301,
+                    "dam": "Lower Two Medicine, Montana"
+                },
+                {
+                    "x": -0.362961352,
+                    "y": -0.834000239,
+                    "dam": "North Branch Tributary, Pennsylvania"
+                },
+                {
+                    "x": 4.131543416,
+                    "y": 0.921878556,
+                    "dam": "Oros, Brazil"
+                },
+                {
+                    "x": -0.363062141,
+                    "y": -0.816621036,
+                    "dam": "Otto Run, USA"
+                },
+                {
+                    "x": -0.362726404,
+                    "y": -0.657890983,
+                    "dam": "Sandy Run, Pennsylvania"
+                },
+                {
+                    "x": -0.332875759,
+                    "y": 0.614845972,
+                    "dam": "Schaeffer, Colorado"
+                },
+                {
+                    "x": -0.363087339,
+                    "y": -1.046026514,
+                    "dam": "South Fork Tributary, Pennsylvania"
+                },
+                {
+                    "x": -0.111139399,
+                    "y": 1.619943204,
+                    "dam": "Swift, Montana"
+                },
+                {
+                    "x": 1.748013744,
+                    "y": 3.331794686,
+                    "dam": "Teton, Idaho"
+                }
+            ],
+            "showLine": false,
+            "pointStyle": "circle",
+            "pointRadius": 5,
+            "pointBackgroundColor": "rgb(0, 204, 0)",
+            "borderColor": "rgb(0, 204, 0)"
+        }
+    ]
+}
