@@ -24,7 +24,8 @@
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/chart.js/dist/Chart.min.js"      
+        "../node_modules/chart.js/dist/Chart.min.js",
+        "../node_modules/chartjs-plugin-zoom/chartjs-plugin-zoom.min.js"      
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

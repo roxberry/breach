@@ -1,24 +1,35 @@
 <nav>
-
-    <div id="breach-formula-calculator">
-        <h4>Calculator</h4>
-        
-            <div class="form-group">
-                <label for="x">Parameter 1</label>
-                <input id="x" class="form-control" placeholder="Parameter 1" />
-                <label for="y">Parameter 2</label>
-                <input id="y" class="form-control" placeholder="Parameter 2" />
-                <button id="calculateFormula" class="btn btn-primary" (click)="onCalculateFormula()">Add DataPoint</button>
+        <div id="breach-formula-calculator" class="card mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Calculator</h4>
+                <p>{{ selectedFormula?.formulaValue }}</p>
+                <div *ngIf="selectedFormula?.formulaValue.indexOf('Vw') !== -1" class="input-group input-group-lg mb-2">
+                        <span class="input-group-addon" id="sizing-addon1">Vw</span>
+                        <input type="text" class="form-control" placeholder="Volume" aria-label="Volume" aria-describedby="sizing-addon1">
+                </div>
+                <div *ngIf="selectedFormula?.formulaValue.indexOf('Hw') !== -1" class="input-group input-group-lg mb-2">
+                        <span class="input-group-addon" id="sizing-addon1">Hw</span>
+                        <input type="text" class="form-control" placeholder="Height" aria-label="Height" aria-describedby="sizing-addon1">
+                </div>
+                <div class="input-group input-group-lg mb-2">
+                        <span class="input-group-addon" id="sizing-addon1">Qp</span>
+                        <input type="text" class="form-control" placeholder="Peak Outflow" aria-label="Peak Outflow" aria-describedby="sizing-addon1" readonly>
+                </div>
+                <button id="calculateFormula" class="btn btn-calculate mb-2" (click)="onCalculateFormula()">Calculate</button>
+                <div class="alert alert-danger" role="alert">
+                        Calculate will only simulate <strong>RANDOM</strong> datapoints until feature complete.
+                </div>
             </div>
-        
-    </div>
+        </div>
+        <div id="breach-formula-list" class="card mb-3">
+            <div class="card-body">
 
-    <div id="breach-formula-list">
-        <h4>Datasets</h4>
-        <ul class="nav flex-column">
-            <li *ngFor="let formula of formulae">
-                <a href="#" (click)="onSelectionChange(formula)">{{ formula.formulaName }}</a>
-            </li>
-        </ul>
-    </div>
+                <h4 class="card-title">Datasets</h4>
+                <ul class="nav flex-column">
+                    <li *ngFor="let formula of formulae">
+                        <a href="#" (click)="onSelectionChange(formula)">{{ formula.formulaName }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 </nav>

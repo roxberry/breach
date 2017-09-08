@@ -15,6 +15,7 @@ import { DataPoint } from './dataPoint'
 export class FormulaeComponent implements OnInit {
 
     formulae: Formula[];
+    selectedFormula: Formula;
 
     constructor(
         private formulaeService: FormulaeService, private http: Http
@@ -24,13 +25,15 @@ export class FormulaeComponent implements OnInit {
         this.formulaeService.getFormulae().then(
             formulae => {
                 this.formulae = formulae
-                this.formulaeService.selectFormula(this.formulae[0])
+                this.selectedFormula = this.formulae[0];
+                this.formulaeService.selectFormula(this.selectedFormula)
             }
         );
     }
 
     onSelectionChange(formula:Formula) {
-        this.formulaeService.selectFormula(formula);
+        this.selectedFormula = formula;
+        this.formulaeService.selectFormula(this.selectedFormula);
     }
     
     onCalculateFormula() {

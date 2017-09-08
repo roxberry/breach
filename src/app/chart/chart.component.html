@@ -1,5 +1,6 @@
-<h4>{{title}}</h4>
-<p>{{formulaValue}}</p>
-<chart class="breach-chart" [type]="type" [data]="data" [options]="options"></chart> 
-
-
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="card-title row justify-content-between"><h4 class="col-8">{{title}}</h4><button (click)="resetZoom()" class="col-2 mr-4">Reset View</button></div>
+        <chart class="breach-chart" [type]="type" [data]="data" [options]="options"></chart>
+    </div>
+</div>
