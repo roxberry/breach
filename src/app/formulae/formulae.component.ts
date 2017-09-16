@@ -5,11 +5,13 @@ import { ChartComponent } from 'angular2-chartjs';
 import { Headers, Http } from '@angular/http';
 import { Formula } from './formula'
 import { DataPoint } from './dataPoint'
+import { ChartService } from '../chart/chart.service';
+import 'mathjs';
 
 @Component({
     selector: 'breach-formulae',
     templateUrl: './formulae.component.html',
-    providers: []
+    providers: [ChartService]
 })
 
 export class FormulaeComponent implements OnInit {
@@ -18,7 +20,7 @@ export class FormulaeComponent implements OnInit {
     selectedFormula: Formula;
 
     constructor(
-        private formulaeService: FormulaeService, private http: Http
+        private formulaeService: FormulaeService, private chartService: ChartService, private http: Http
     ) {}
 
     getFormulae(): void {
@@ -37,9 +39,16 @@ export class FormulaeComponent implements OnInit {
     }
     
     onCalculateFormula() {
+        //need to figure out mean, std
+        var values, std, mean;
+        values = this.chartService.getDataArray('Hw');
+        mean = math.mean(values);
+        std = math.std(values);
+
         var dataPoint = new DataPoint(
-            Math.floor((Math.random() * 25) + 1), Math.floor((Math.random() * 5) + 1)
+            values.length + 1, (1 - mean)/std
         );
+
         this.formulaeService.calculateFormula(dataPoint);
     }
 

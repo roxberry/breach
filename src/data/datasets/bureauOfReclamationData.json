@@ -117,6 +117,7 @@
         "pointStyle": "circle",
         "pointRadius": 5,
         "pointBackgroundColor": "rgb(0, 204, 0)",
-        "borderColor": "rgb(0, 204, 0)"
+        "borderColor": "rgb(0, 204, 0)",
+        "chartType": "bar"
     }
 ]}

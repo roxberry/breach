@@ -3,6 +3,7 @@
         "formulaUid": 0,
         "formulaValue": "Qp = 19.1(Hw)^1.85",
         "formulaName": "U.S. Bureau of Reclamation (1982)",
+        "variables": ["Hw"],
         "datasetPath": "bureauOfReclamationData"
     },
     {

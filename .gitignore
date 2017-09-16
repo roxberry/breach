@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Mac
 # General
 *.DS_Store
 .AppleDouble
@@ -85,8 +86,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# VS CODE
 # VS Code specific
-.vscode/*
+.vscode/*git
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
