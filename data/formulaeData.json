@@ -3,18 +3,51 @@
         "formulaUid": 0,
         "formulaValue": "Qp = 19.1(Hw)^1.85",
         "formulaName": "U.S. Bureau of Reclamation (1982)",
+        "heightLabel": "Hw",
+        "variables" : { "usesHeight" : true},
         "datasetPath": "bureauOfReclamationData"
     },
     {
         "formulaUid": 1,
         "formulaValue": "Qp = 1.154(Vw * Hw)^0.412",
         "formulaName": "MacDonald & Langridge (1984) 412",
+        "heightLabel": "Hw",
+        "volumeLabel": "Vw",
+        "variables" : { "usesHeight" : true, "usesVolume": true},
         "datasetPath": "macDonaldLangridge"
     },
     {
         "formulaUid": 2,
         "formulaValue": "Qp = 3.85(Vw * Hw)^0.411",
-        "formulaName": "MacDonald and Langridge (1984) 411",
+        "formulaName": "MacDonald & Langridge (1984) 411",
+        "heightLabel": "Hw",
+        "volumeLabel": "Vw",
+        "variables" : { "usesHeight" : true, "usesVolume": true},
         "datasetPath": "macDonaldLangridge"
+    },
+    {
+        "formulaUid": 3,
+        "formulaValue": "Qp=13.4(Hd)^1.89",
+        "formulaName": "Singh and Snorrason (1982) Height",
+        "heightLabel": "Hd",        
+        "variables" : { "usesHeight" : true},
+        "datasetPath": "singhAndSnorrason1"
+    },
+    {
+        "formulaUid": 4,
+        "formulaValue": "Qp=1.776(S)^0.47",
+        "formulaName": "Singh and Snorrason (1982) Storage",
+        "storageLabel": "S",
+        "variables" : { "usesStorage": true},
+        "datasetPath": "singhAndSnorrason2"
+    },
+    {
+        "formulaUid": 5,
+        "formulaValue": "Qp=0.607(Vw^0.295*Hw^1.24)",
+        "formulaName": "Froehlick (1995)",
+        "heightLabel": "Hw",
+        "volumeLabel": "Vw",
+        "variables" : { "usesHeight" : true, "usesVolume": true},
+        "datasetPath": "froehlick"
     }
 ]
