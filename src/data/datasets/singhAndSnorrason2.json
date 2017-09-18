@@ -1,0 +1,52 @@
+{   "labels" : [],
+    "datasets": [
+    {
+        "label": "Singh and Snorrason (1982) Storage",
+        "data": [
+            {
+              "storage": 3280000,
+              "normalizedStorage": -0.667496365,
+              "dam": "Pierce Lake Dam"
+            },
+            {
+              "storage": 740000,
+              "normalizedStorage": -0.725152162,
+              "dam": "Lake in the Hills Dam No. 1"
+            },
+            {
+              "storage": 100000,
+              "normalizedStorage": -0.739679607,
+              "dam": "Lake in the Hills Dam No. 2"
+            },
+            {
+              "storage": 190000,
+              "normalizedStorage": -0.737636685,
+              "dam": "Lake Marian Dam"
+            },
+            {
+              "storage": 91540000,
+              "normalizedStorage": 1.33592907,
+              "dam": "Clinton Lake Dam"
+            },
+            {
+              "storage": 66000000,
+              "normalizedStorage": 0.756193225,
+              "dam": "Lake Springfield Dam"
+            },
+            {
+              "storage": 2800000,
+              "normalizedStorage": -0.678391949,
+              "dam": "Weslake Dam"
+            },
+            {
+              "storage": 96840000,
+              "normalizedStorage": 1.456234472,
+              "dam": "Kinkaid Lake Dam"
+            }
+          ],
+        "borderWidth": 1,
+        "backgroundColor": "rgb(0, 204, 0)",
+        "borderColor": "rgb(0, 204, 0)",
+        "chartType": "bar"
+    }
+]}

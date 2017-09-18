@@ -1,6 +1,10 @@
 # breach
 Web application for dam breach analytics
 
+## Deploy
+Run `nvm 8.3`
+Run `ngh --message==''` with a message to deploy to github.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -18,10 +18,4 @@ export class ChartService {
       .then(res => JSON.parse(res.text()));
   }
 
-  getDataArray(variable) {
-    var data = {}
-    data['Hw'] = [-2,-1,0,1,2];
-    return data[variable];
-  }
-
 }

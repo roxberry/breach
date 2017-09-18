@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 import { Subject }    from 'rxjs/Subject';
-import { Formula } from './formula';
+import { BreachFormula } from './breachFormula';
 import { DataPoint } from './dataPoint';
 import 'rxjs/add/operator/toPromise';
 
@@ -12,27 +12,27 @@ export class FormulaeService {
   constructor(private http: Http) {
   }
 
-  getFormulae():Promise<Formula[]> {
+  getFormulae():Promise<BreachFormula[]> {
 
     var url = 'data/formulaeData.json';
 
     return this.http.get(url)
       .toPromise()
-      .then(res => res.json() as Formula[])
+      .then(res => res.json() as BreachFormula[])
       .catch(this.handleError);
   }
 
-  private formulaSelected = new Subject<Formula>();
+  private formulaSelected = new Subject<BreachFormula>();
   private formulaCalculated = new Subject<DataPoint>();
 
   formulaSelected$ = this.formulaSelected.asObservable();
   formulaCalculated$ = this.formulaCalculated.asObservable();
 
-  selectFormula(formula: Formula) {
+  selectFormula(formula: BreachFormula) {
       this.formulaSelected.next(formula);
   }
 
-  calculateFormula(dataPoint: DataPoint) {
+  calculateFormula(dataPoint: any) {
       this.formulaCalculated.next(dataPoint);
   }
   

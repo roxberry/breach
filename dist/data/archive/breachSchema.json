@@ -1,0 +1,54 @@
+{   "formulae": [
+        {
+            "formulaUid": 0,
+            "formula": "Qp=0.1202(L)^1.7856",
+            "formulaName": "Thorton, Pierce, Abt I",
+            "dams": [0,1]
+        }
+    ],
+    "dams": [
+        {   "damUid": 0,
+            "dam": "Apishapa, Colorado",
+            "built": 1920,
+            "failed": 1923,
+            "failureMode": "piping",
+            "construction": "Homogeneous earthfill, fine sand",
+            "damType": "",
+            "damEnrodibility": "",
+            "reference": 3,
+            "embankmentDimensions": {
+                "damHeight": 0,
+                "crestWidth": 0,
+                "baseWidth": 0,
+                "averageWidth": 0,
+                "upstreamSlope": 0,
+                "downstreamSlope": 0,
+                "length": 0,
+                "peakOutflow": 0
+            },
+            "hydraulicCharacteristics": {
+                "determinantMethod": "15-min reservoir drawdown",
+                "reservoirStorage": 0,
+                "surfaceArea": 0,
+                "volAboveBreachInvert": 0,
+                "depthAboveBreach": 0,
+                "breachFormationFactor": 0
+            },
+            "breachCharacteristics": {
+                "breachShape": 0,
+                "height": 0,
+                "topWidth": 0,
+                "bottomWidth": 0,
+                "averageWidth": 0,
+                "averageSideSlopes": 0,
+                "erodedVolume": 0
+            },
+            "timeParameters": {
+                "formationTime": 0,
+                "failureTime": 0,
+                "developmentTime": 0,
+                "breachAndEmptyTime": 0
+            }
+        }
+    ]
+}

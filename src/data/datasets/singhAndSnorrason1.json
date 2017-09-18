@@ -1,0 +1,52 @@
+{   "labels" : [],
+    "datasets": [
+    {
+        "label": "Singh and Snorrason (1982) Dam Height",
+        "data": [
+            {
+              "dam": "Pierce Lake Dam",
+              "height": 14,
+              "normalizedHeight": -0.202010717
+            },
+            {
+              "dam": "Lake in the Hills Dam No. 1",
+              "height": 12.2,
+              "normalizedHeight": -0.471358339
+            },
+            {
+              "dam": "Lake in the Hills Dam No. 2",
+              "height": 4.4,
+              "normalizedHeight": -1.638531368
+            },
+            {
+              "dam": "Lake Marian Dam",
+              "height": 15.2,
+              "normalizedHeight": -0.022445635
+            },
+            {
+              "dam": "Clinton Lake Dam",
+              "height": 19.8,
+              "normalizedHeight": 0.665887177
+            },
+            {
+              "dam": "Lake Springfield Dam",
+              "height": 14.6,
+              "normalizedHeight": -0.112228176
+            },
+            {
+              "dam": "Weslake Dam",
+              "height": 14.6,
+              "normalizedHeight": -0.112228176
+            },
+            {
+              "dam": "Kinkaid Lake Dam",
+              "height": 28,
+              "normalizedHeight": 1.892915233
+            }
+          ],
+        "borderWidth": 1,
+        "backgroundColor": "rgb(0, 204, 0)",
+        "borderColor": "rgb(0, 204, 0)",
+        "chartType": "bar"
+    }
+]}

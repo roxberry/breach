@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { Observable } from "rxjs/Observable";
 import { ChartComponent } from 'angular2-chartjs';
 import { Headers, Http } from '@angular/http';
-import { Formula } from "../formulae/formula";
+import { BreachFormula } from "../formulae/breachFormula";
 import { DataPoint } from "../formulae/dataPoint";
 import 'chartjs-plugin-zoom'
 // new Chart(document.getElementById("chartjs-6"),
@@ -35,74 +35,173 @@ export class BreachChartComponent implements OnInit {
 
     @ViewChild(ChartComponent) chart: ChartComponent;
 
-    formulaSubscription: Subscription;
-    dataPointSubscription: Subscription;
+    public formulaSubscription: Subscription;
+    public dataPointSubscription: Subscription;
+    public title: string;
+    public formulaValue: string;
+    public type: string;
+    public data: any;
+    public options: any;
 
-    title = '';
-    formulaValue = ''
-    type = 'scatter';
-    data = {};
-    options = {
-        animation: {
-            duration: 0,
-            onComplete: this.onAnimationComplete
-        },
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'top'
-            }],
-            yAxes: [{
-                max: 10,
-                min: -10,
-                stepSize: 0.01
-            }]
-        },
-        tooltips: {
-            backgroundColor: 'rgba(0,0,0,1)',
-            enabled: true,
-            mode: 'point',
-            callbacks: {
-                label: function (tooltipItem, data) {
-                    if (tooltipItem.datasetIndex === 0) {
-                        return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].dam;
-                    }
-                    else {
-                        return "User Defined";
-                    }
-                },
-                afterLabel: function (tooltipItem, data) {
 
-                    var x = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].x;
-                    var y = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].y;
-                    return x + "," + y;
-                },
-                footerFontStyle: 'normal'
-            }
-        },
-        legend: {
-            display: false
-        },
-        pan: {
-            // Boolean to enable panning
-            enabled: true,
 
-            // Panning directions. Remove the appropriate direction to disable 
-            // Eg. 'y' would only allow panning in the y direction
-            mode: 'xy',
-        },
-        zoom: {
-            // Boolean to enable zooming
-            enabled: true,
+    loadBarChart(title, formula, dataset): void {
+        this.title = title;
+        this.formulaValue = formula.formulaValue;
+        this.type = 'bar';
+ 
+        dataset.labels = dataset.datasets[0].data.map(x => x.dam);
 
-            // Zooming directions. Remove the appropriate direction to disable 
-            // Eg. 'y' would only allow zooming in the y direction
-            mode: 'xy'
-        },
-        showTooltips: false
-    };
+        var mapdata = [];
+
+        if (formula.variables.usesHeight)
+        {
+            mapdata = dataset.datasets[0].data.map(x => x.normalizedHeight);
+        }
+        if (formula.variables.usesStorage)
+        {
+            mapdata = dataset.datasets[0].data.map(x => x.normalizedStorage);
+        }
+
+        dataset.datasets[0].data = mapdata;
+
+        this.data = dataset;
+
+        this.options = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales:
+            {
+                xAxes: [{
+                    display: false
+                }]
+            },
+            tooltips: {
+                backgroundColor: 'rgba(0,0,0,1)',
+                enabled: true,
+                mode: 'nearest',
+                callbacks: {
+                    title: function (tooltipItem, data) {
+                        if (tooltipItem[0].datasetIndex === 0) {
+                            return tooltipItem[0].xLabel;
+                        }
+                        else {
+                            return "User Defined";
+                        }
+                    },
+                    footerFontStyle: 'normal'
+                }
+            },
+            legend: {
+                display: false
+            },
+            pan: {
+                // Boolean to enable panning
+                enabled: true,
+
+                // Panning directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow panning in the y direction
+                mode: 'xy',
+            },
+            zoom: {
+                // Boolean to enable zooming
+                enabled: true,
+
+                // Zooming directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow zooming in the y direction
+                mode: 'xy'
+            },
+            showTooltips: false
+        }
+    }
+
+    loadScatterPlot(title, formula, dataset): void {
+        this.title = title;
+        this.formulaValue = formula.formulaValue;
+        this.type = 'scatter';
+        
+        var mapdata = [];
+        dataset.datasets[0].data.forEach( function(p){
+            mapdata.push({x: p.normalizedVolume, y: p.normalizedHeight, dam: p.dam });
+        });
+
+        dataset.datasets[0].data = mapdata;
+
+        this.data = dataset;
+
+        this.options = {
+            animation: {
+                duration: 0,
+                onComplete: this.onAnimationComplete
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'top'
+                }],
+                yAxes: [{
+                    max: 10,
+                    min: -10,
+                    stepSize: 0.01
+                }]
+            },
+            tooltips: {
+                backgroundColor: 'rgba(0,0,0,1)',
+                enabled: true,
+                mode: 'point',
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        if (tooltipItem.datasetIndex === 0) {
+                            return data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].dam;
+                        }
+                        else {
+                            return "User Defined";
+                        }
+                    },
+                    afterLabel: function (tooltipItem, data) {
+
+                        var x = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].x;
+                        var y = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index].y;
+                        return x + "," + y;
+                    },
+                    title: function (tooltipItem, data) {
+                        if (tooltipItem.datasetIndex >0) {
+                            return "User Defined";
+                        }
+                        else {
+                            return tooltipItem.title;
+                        }
+                    },
+                    footerFontStyle: 'normal'
+                }
+            },
+            legend: {
+                display: false
+            },
+            pan: {
+                // Boolean to enable panning
+                enabled: true,
+
+                // Panning directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow panning in the y direction
+                mode: 'xy',
+            },
+            zoom: {
+                // Boolean to enable zooming
+                enabled: true,
+
+                // Zooming directions. Remove the appropriate direction to disable 
+                // Eg. 'y' would only allow zooming in the y direction
+                mode: 'xy'
+            },
+            showTooltips: false
+        };
+
+        // this.chart.chart.update();
+        // this.chart.chart.resetZoom()
+    }
 
     onAnimationComplete(): void {
         if (this.chart.data != undefined && this.chart.data.datasets.length > 0) {
@@ -116,7 +215,7 @@ export class BreachChartComponent implements OnInit {
             });
         }
         //this.chart.chart.resetZoom();
-        
+
     }
 
     ngOnInit(): void {
@@ -128,45 +227,59 @@ export class BreachChartComponent implements OnInit {
         this.dataPointSubscription.unsubscribe();
     }
 
-    loadFormula(formula: Formula) {
+    loadFormula(formula: BreachFormula) {
+        this.chart.chart.destroy();
+        
         this.chartService.getDataset(formula.datasetPath).then(
             dataset => {
-                dataset['datasets'].push(
-                    {
-                        "label": "User Added",
-                        "data": [],
-                        "showLine": false,
-                        "pointStyle": "circle",
-                        "pointRadius": 15,
-                        "pointBackgroundColor": "red",
-                        "borderColor": "red"
-                    }
-                );
+                if (formula.variables.usesHeight && formula.variables.usesVolume) {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "showLine": false,
+                            "pointStyle": "circle",
+                            "pointRadius": 15,
+                            "pointBackgroundColor": "red",
+                            "borderColor": "red"
+                        }
+                    );
 
-                var labels = [];
+                    var labels = [];
+                    
+                    dataset['datasets'][0].data.forEach(element => {
+                        labels.push(element.dam)
+                    });
+                    dataset['datasets'][0].labels = labels;
 
-                dataset['datasets'][0].data.forEach(element => {
-                    labels.push(element.dam)
-                });
-                dataset['datasets'][0].labels = labels;
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset);
+                }
+                else if ((formula.variables.usesHeight || formula.variables.usesStorage) && !formula.variables.usesVolume)
+                {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "borderWidth": 1,
+                            "backgroundColor": "red",
+                            "borderColor": "red"
+                        }
+                    );
 
-                this.data = dataset;
-                this.title = dataset['datasets'][0].label;
-                this.formulaValue = formula.formulaValue;
-
-                //this.chart.chart._plugins = this.plugins;
-                this.chart.chart.update();
-                this.chart.chart.resetZoom()
+                    this.loadBarChart(dataset['datasets'][0].label, formula, dataset);
+                }
             }
         );
     }
 
-    addDataPoint(dataPoint: DataPoint) {
+    addDataPoint(dataPoint: any) {
         this.chart.data.datasets[1].data.push(dataPoint);
         this.chart.chart.update();
     }
 
     resetZoom() {
+        this.chart.data.datasets[1].data = [];
+        this.chart.chart.update();
         this.chart.chart.resetZoom();
     }
     // onAfterDatasetsdraw(controller, easing) {
