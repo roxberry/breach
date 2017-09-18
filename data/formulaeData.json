@@ -5,7 +5,8 @@
         "formulaName": "U.S. Bureau of Reclamation (1982)",
         "heightLabel": "Hw",
         "variables" : { "usesHeight" : true},
-        "datasetPath": "bureauOfReclamationData"
+        "datasetPath": "bureauOfReclamationData", 
+        "active": true
     },
     {
         "formulaUid": 1,
@@ -14,7 +15,8 @@
         "heightLabel": "Hw",
         "volumeLabel": "Vw",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "macDonaldLangridge"
+        "datasetPath": "macDonaldLangridge", 
+        "active": true
     },
     {
         "formulaUid": 2,
@@ -23,7 +25,8 @@
         "heightLabel": "Hw",
         "volumeLabel": "Vw",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "macDonaldLangridge"
+        "datasetPath": "macDonaldLangridge", 
+        "active": true
     },
     {
         "formulaUid": 3,
@@ -31,7 +34,8 @@
         "formulaName": "Singh and Snorrason (1982) Height",
         "heightLabel": "Hd",        
         "variables" : { "usesHeight" : true},
-        "datasetPath": "singhAndSnorrason1"
+        "datasetPath": "singhAndSnorrason1", 
+        "active": true
     },
     {
         "formulaUid": 4,
@@ -39,7 +43,8 @@
         "formulaName": "Singh and Snorrason (1982) Storage",
         "storageLabel": "S",
         "variables" : { "usesStorage": true},
-        "datasetPath": "singhAndSnorrason2"
+        "datasetPath": "singhAndSnorrason2", 
+        "active": true
     },
     {
         "formulaUid": 5,
@@ -48,6 +53,17 @@
         "heightLabel": "Hw",
         "volumeLabel": "Vw",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "froehlick"
+        "datasetPath": "froehlick", 
+        "active": false
+    },
+    {
+        "formulaUid": 6,
+        "formulaValue": "Qp=0.607(Vw^0.295*Hw^1.24)",
+        "formulaName": "Froehlick (1995)",
+        "heightLabel": "Hw",
+        "volumeLabel": "Vw",
+        "variables" : { "usesHeight" : true, "usesVolume": true},
+        "datasetPath": "froehlick", 
+        "active": false
     }
 ]
