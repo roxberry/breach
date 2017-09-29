@@ -1,0 +1,184 @@
+{
+    "datasets": [
+        {
+            "label": "Pierce et al. (2010)",
+            "data": [
+                {
+                  "damId": 151,
+                  "dam": "USDA-ARS- Test #4, Okla",
+                  "length": 4.9,
+                  "normalizedLength": -0.6648677,
+                  "Qp": 2.3,
+                  "normalizedQp": -0.542553682,
+                  "volume": 5090,
+                  "normalizedVolume": -0.365499636,
+                  "height": 1.5,
+                  "normalizedHeight": -1.076713816
+                },
+                {
+                  "damId": 152,
+                  "dam": "USDA-ARS- Test #6, Okla",
+                  "length": 4.9,
+                  "normalizedLength": -0.6648677,
+                  "Qp": 1.3,
+                  "normalizedQp": -0.542600528,
+                  "volume": 5190,
+                  "normalizedVolume": -0.365499015,
+                  "height": 1.5,
+                  "normalizedHeight": -1.076713816
+                },
+                {
+                  "damId": 149,
+                  "dam": "USDA-ARS- Test #1, Okla",
+                  "length": 7.3,
+                  "normalizedLength": -0.661335738,
+                  "Qp": 6.5,
+                  "normalizedQp": -0.54235693,
+                  "volume": 4900,
+                  "normalizedVolume": -0.365500817,
+                  "height": 2.29,
+                  "normalizedHeight": -1.023555818
+                },
+                {
+                  "damId": 150,
+                  "dam": "USDA-ARS- Test #3, Okla",
+                  "length": 7.3,
+                  "normalizedLength": -0.661335738,
+                  "Qp": 1.8,
+                  "normalizedQp": -0.542577105,
+                  "volume": 4900,
+                  "normalizedVolume": -0.365500817,
+                  "height": 2.29,
+                  "normalizedHeight": -1.023555818
+                },
+                {
+                  "damId": 153,
+                  "dam": "USDA-ARS- Test #7, Okla",
+                  "length": 12,
+                  "normalizedLength": -0.654418978,
+                  "Qp": 4.2,
+                  "normalizedQp": -0.542464675,
+                  "volume": 4770,
+                  "normalizedVolume": -0.365501625,
+                  "height": 2.13,
+                  "normalizedHeight": -1.034321995
+                },
+                {
+                  "damId": 3,
+                  "dam": "Baldwin Hills, California",
+                  "length": 198,
+                  "normalizedLength": -0.380691911,
+                  "Qp": 1130,
+                  "normalizedQp": -0.489725737,
+                  "volume": 910000,
+                  "normalizedVolume": -0.359876056,
+                  "height": 12.2,
+                  "normalizedHeight": -0.356725736
+                },
+                {
+                  "damId": 132,
+                  "dam": "Swift, Montana",
+                  "length": 226,
+                  "normalizedLength": -0.339485686,
+                  "Qp": 24947,
+                  "normalizedQp": 0.625999336,
+                  "volume": 37000000,
+                  "normalizedVolume": -0.135594074,
+                  "height": 47.85,
+                  "normalizedHeight": 2.042113054
+                },
+                {
+                  "damId": 50,
+                  "dam": "Hatchtown, Utah",
+                  "length": 238,
+                  "normalizedLength": -0.321825875,
+                  "Qp": 3080,
+                  "normalizedQp": -0.398376537,
+                  "volume": 14800000,
+                  "normalizedVolume": -0.273556391,
+                  "height": 16.8,
+                  "normalizedHeight": -0.047198151
+                },
+                {
+                  "damId": 65,
+                  "dam": "Johnstown (South Fork Dam, Penn.)",
+                  "length": 284,
+                  "normalizedLength": -0.254129933,
+                  "Qp": 8500,
+                  "normalizedQp": -0.144472608,
+                  "volume": 18900000,
+                  "normalizedVolume": -0.248076864,
+                  "height": 24.6,
+                  "normalizedHeight": 0.477652973
+                },
+                {
+                  "damId": 120,
+                  "dam": "Schaeffer, Colorado",
+                  "length": 335,
+                  "normalizedLength": -0.179075737,
+                  "Qp": 4500,
+                  "normalizedQp": -0.331855582,
+                  "volume": 4440000,
+                  "normalizedVolume": -0.337938805,
+                  "height": 30.5,
+                  "normalizedHeight": 0.874655746
+                },
+                {
+                  "damId": 126,
+                  "dam": "Shimantan, China",
+                  "length": 500,
+                  "normalizedLength": 0.063746661,
+                  "Qp": 30000,
+                  "normalizedQp": 0.862710878,
+                  "volume": 117000000,
+                  "normalizedVolume": 0.361567426,
+                  "height": 27.4,
+                  "normalizedHeight": 0.666061069
+                },
+                {
+                  "damId": 7,
+                  "dam": "Big Bay Dam,USA",
+                  "length": 576.07,
+                  "normalizedLength": 0.175695145,
+                  "Qp": 4160,
+                  "normalizedQp": -0.347783134,
+                  "volume": 17500000,
+                  "normalizedVolume": -0.25677719,
+                  "height": 13.5,
+                  "normalizedHeight": -0.269250549
+                },
+                {
+                  "damId": 4,
+                  "dam": "Banqiao, China",
+                  "length": 2000,
+                  "normalizedLength": 2.271223012,
+                  "Qp": 78100,
+                  "normalizedQp": 3.11599114,
+                  "volume": 607500000,
+                  "normalizedVolume": 3.409788876,
+                  "height": 31,
+                  "normalizedHeight": 0.908300049
+                },
+                {
+                  "damId": 133,
+                  "dam": "Taum Sauk, USA",
+                  "length": 2000.1,
+                  "normalizedLength": 2.271370177,
+                  "Qp": 7743,
+                  "normalizedQp": -0.179934835,
+                  "volume": 5390000,
+                  "normalizedVolume": -0.332035012,
+                  "height": 31.46,
+                  "normalizedHeight": 0.939252808
+                }
+              ],
+            "showLine": false,
+            "pointStyle": "circle",
+            "pointRadius": 5,
+            "pointBackgroundColor": "rgb(0, 204, 0)",
+            "borderColor": "rgb(0, 204, 0)",
+            "borderWidth": 1,
+            "backgroundColor": "rgb(0, 204, 0)"
+        }
+    ]
+}

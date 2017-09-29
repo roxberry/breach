@@ -42,7 +42,7 @@ export class BreachChartComponent implements OnInit {
     public type: string;
     public data: any;
     public options: any;
-
+    public chartSelected: boolean;
 
 
     loadBarChart(title, formula, dataset): void {
@@ -62,7 +62,10 @@ export class BreachChartComponent implements OnInit {
         {
             mapdata = dataset.datasets[0].data.map(x => x.normalizedStorage);
         }
-
+        if (formula.variables.usesLength)
+        {
+            mapdata = dataset.datasets[0].data.map(x => x.normalizedLength);
+        }
         dataset.datasets[0].data = mapdata;
 
         this.data = dataset;
@@ -73,10 +76,14 @@ export class BreachChartComponent implements OnInit {
             scales:
             {
                 xAxes: [{
-                    display: false
+                    display: true,
+                    ticks: {
+                        stepSize: .01
+                    }
                 }]
             },
             tooltips: {
+                scaleShowValues: true,
                 backgroundColor: 'rgba(0,0,0,1)',
                 enabled: true,
                 mode: 'nearest',
@@ -93,7 +100,7 @@ export class BreachChartComponent implements OnInit {
                 }
             },
             legend: {
-                display: false
+                display: true
             },
             pan: {
                 // Boolean to enable panning
@@ -111,40 +118,41 @@ export class BreachChartComponent implements OnInit {
                 // Eg. 'y' would only allow zooming in the y direction
                 mode: 'xy'
             },
-            showTooltips: false
+            showTooltips: true
         }
     }
 
-    loadScatterPlot(title, formula, dataset): void {
+    loadScatterPlot(title, formula, dataset, mapdata): void {
         this.title = title;
         this.formulaValue = formula.formulaValue;
         this.type = 'scatter';
-        
-        var mapdata = [];
-        dataset.datasets[0].data.forEach( function(p){
-            mapdata.push({x: p.normalizedVolume, y: p.normalizedHeight, dam: p.dam });
-        });
 
         dataset.datasets[0].data = mapdata;
 
         this.data = dataset;
 
         this.options = {
-            animation: {
-                duration: 0,
-                onComplete: this.onAnimationComplete
-            },
+            // animation: {
+            //     duration: 0,
+            //     onComplete: this.onAnimationComplete
+            // },
             responsive: true,
             maintainAspectRatio: false,
             scales: {
                 xAxes: [{
                     type: 'linear',
-                    position: 'top'
+                    position: 'top',
+                    display: true,
+                    min: 1,
+                    max: 1,
+                    stepSize: 1
+                    
                 }],
                 yAxes: [{
-                    max: 10,
-                    min: -10,
-                    stepSize: 0.01
+                    beginAtZero: true,
+                    stepSize: 100000,
+                    min: 0,
+                    max: 1
                 }]
             },
             tooltips: {
@@ -178,7 +186,7 @@ export class BreachChartComponent implements OnInit {
                 }
             },
             legend: {
-                display: false
+                display: true
             },
             pan: {
                 // Boolean to enable panning
@@ -191,7 +199,7 @@ export class BreachChartComponent implements OnInit {
             zoom: {
                 // Boolean to enable zooming
                 enabled: true,
-
+        
                 // Zooming directions. Remove the appropriate direction to disable 
                 // Eg. 'y' would only allow zooming in the y direction
                 mode: 'xy'
@@ -208,10 +216,14 @@ export class BreachChartComponent implements OnInit {
             //this.chart.chart.ctx.fillText(this.chart.data.datasets[0].data);
             var meta = this.chart.chart.controller.getDatasetMeta(0);
             var ds = this.chart.data.datasets[0];
+            meta.data.sort(function(a, b) {
+                return a._model.x - b._model.x;
+              });
 
             meta.data.forEach(element => {
                 this.chart.chart.ctx.fillStyle = "#000000";
-                this.chart.chart.ctx.fillText(ds.data[element._index].dam, element._model.x + 5, element._model.y - 5);
+                    this.chart.chart.ctx.fillText(ds.data[element._index].dam, element._model.x + 10, element._model.y - 5);
+
             });
         }
         //this.chart.chart.resetZoom();
@@ -241,6 +253,7 @@ export class BreachChartComponent implements OnInit {
                             "pointStyle": "circle",
                             "pointRadius": 15,
                             "pointBackgroundColor": "red",
+                            "backgroundColor": "red",                            
                             "borderColor": "red"
                         }
                     );
@@ -252,9 +265,123 @@ export class BreachChartComponent implements OnInit {
                     });
                     dataset['datasets'][0].labels = labels;
 
-                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset);
+                    var mapdata = [];
+                    dataset.datasets[0].data.forEach( function(p){
+                        mapdata.push({x: p.normalizedVolume, y: p.normalizedHeight, dam: p.dam });
+                    });
+
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset, mapdata);
                 }
-                else if ((formula.variables.usesHeight || formula.variables.usesStorage) && !formula.variables.usesVolume)
+                else if (formula.variables.usesWidth && formula.variables.usesVolume) {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "showLine": false,
+                            "pointStyle": "circle",
+                            "pointRadius": 15,
+                            "pointBackgroundColor": "red",
+                            "backgroundColor": "red",                            
+                            "borderColor": "red"
+                        }
+                    );
+
+                    var labels = [];
+                    
+                    dataset['datasets'][0].data.forEach(element => {
+                        labels.push(element.dam)
+                    });
+                    dataset['datasets'][0].labels = labels;
+
+                    var mapdata = [];
+                    dataset.datasets[0].data.forEach( function(p){
+                        mapdata.push({x: p.normalizedVolume, y: p.normalizedWidth, dam: p.dam });
+                    });
+
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset, mapdata);
+                }
+                else if (formula.variables.usesWidth && formula.variables.usesHeight) {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "showLine": false,
+                            "pointStyle": "circle",
+                            "pointRadius": 15,
+                            "pointBackgroundColor": "red",
+                            "backgroundColor": "red",                            
+                            "borderColor": "red"
+                        }
+                    );
+
+                    var labels = [];
+                    
+                    dataset['datasets'][0].data.forEach(element => {
+                        labels.push(element.dam)
+                    });
+                    dataset['datasets'][0].labels = labels;
+
+                    var mapdata = [];
+                    dataset.datasets[0].data.forEach( function(p){
+                        mapdata.push({x: p.normalizedWidth, y: p.normalizedHeight, dam: p.dam });
+                    });
+
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset, mapdata);
+                }
+                else if (formula.variables.usesLength && formula.variables.usesVolume) {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "showLine": false,
+                            "pointStyle": "circle",
+                            "pointRadius": 15,
+                            "pointBackgroundColor": "red",
+                            "backgroundColor": "red",                            
+                            "borderColor": "red"
+                        }
+                    );
+
+                    var labels = [];
+                    
+                    dataset['datasets'][0].data.forEach(element => {
+                        labels.push(element.dam)
+                    });
+                    dataset['datasets'][0].labels = labels;
+                    var mapdata = [];
+                    dataset.datasets[0].data.forEach( function(p){
+                        mapdata.push({x: p.normalizedVolume, y: p.normalizedLength, dam: p.dam });
+                    });
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset, mapdata);
+                }
+                else if (formula.variables.usesLength && formula.variables.usesHeight) {
+                    dataset['datasets'].push(
+                        {
+                            "label": "User Added",
+                            "data": [],
+                            "showLine": false,
+                            "pointStyle": "circle",
+                            "pointRadius": 15,
+                            "pointBackgroundColor": "red",
+                            "backgroundColor": "red",
+                            "borderColor": "red"
+                        }
+                    );
+
+                    var labels = [];
+                    
+                    dataset['datasets'][0].data.forEach(element => {
+                        labels.push(element.dam)
+                    });
+                    dataset['datasets'][0].labels = labels;
+                    var mapdata = [];
+                    dataset.datasets[0].data.forEach( function(p){
+                        mapdata.push({x: p.normalizedHeight, y: p.normalizedLength, dam: p.dam });
+                    });
+                    this.loadScatterPlot(dataset['datasets'][0].label, formula, dataset, mapdata);
+                }
+                else if ((formula.variables.usesHeight || formula.variables.usesStorage || formula.variables.usesLength) 
+                    && (!formula.variables.usesVolume && !formula.variables.usesWidth))
                 {
                     dataset['datasets'].push(
                         {
@@ -270,6 +397,7 @@ export class BreachChartComponent implements OnInit {
                 }
             }
         );
+        this.chartSelected = true;
     }
 
     addDataPoint(dataPoint: any) {

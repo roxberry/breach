@@ -2,21 +2,29 @@
         <div id="breach-formula-calculator" class="card mb-3">
             <div class="card-body">
                 <h4 class="card-title">Calculator</h4>
-                <p>{{ selectedFormula?.formulaValue }}</p>
+                <p [innerHtml]= selectedFormula?.formulaValue ></p>
                 <div *ngIf="selectedFormula?.variables.usesVolume" class="input-group input-group-lg mb-2">
-                        <span class="input-group-addon" id="sizing-addon1">{{ selectedFormula?.volumeLabel }}</span>
+                        <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.volumeLabel"></span>
                         <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.volume" placeholder="Volume" aria-label="Volume" aria-describedby="sizing-addon1">
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesHeight" class="input-group input-group-lg mb-2">
-                        <span class="input-group-addon" id="sizing-addon1">{{ selectedFormula?.heightLabel }}</span>
+                        <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.heightLabel"></span>
                         <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.height" placeholder="Height" aria-label="Height" aria-describedby="sizing-addon1">
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesStorage" class="input-group input-group-lg mb-2">
-                    <span class="input-group-addon" id="sizing-addon1">{{ selectedFormula?.storageLabel }}</span>
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.storageLabel"></span>
                     <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.storage" placeholder="Storage" aria-label="Storage" aria-describedby="sizing-addon1">
                 </div>
+                <div *ngIf="selectedFormula?.variables.usesWidth" class="input-group input-group-lg mb-2">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.widthLabel"></span>
+                    <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.width" placeholder="Width" aria-label="Width" aria-describedby="sizing-addon1">
+                </div>
+                <div *ngIf="selectedFormula?.variables.usesLength" class="input-group input-group-lg mb-2">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.lengthLabel"></span>
+                    <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.length" placeholder="Length" aria-label="Length" aria-describedby="sizing-addon1">
+                </div>
                 <div class="input-group input-group-lg mb-2">
-                        <span class="input-group-addon" id="sizing-addon1">Qp</span>
+                        <span class="input-group-addon" id="sizing-addon1">Q<sub>p</sub></span>
                         <input type="text" class="form-control" placeholder="Peak Outflow" aria-label="Peak Outflow" aria-describedby="sizing-addon1" readonly>
                 </div>
                 <button id="calculateFormula" class="btn btn-calculate mb-2" (click)="onCalculateFormula(selectedFormula)">Plot</button>
@@ -28,7 +36,8 @@
                 <h4 class="card-title">Formulae / Datasets</h4>
                 <ul class="nav flex-column">
                     <li *ngFor="let formula of formulae">
-                        <a href="#" (click)="onSelectionChange(formula)">{{ formula.formulaName }}</a>
+                        <a  *ngIf="formula.active" href="#" (click)="onSelectionChange(formula)" class="listFormulaName" [innerHtml]=formula.formulaName></a><br/>
+                        <p *ngIf="formula.active" class="listFormulaValue" [innerHtml]=formula.formulaValue></p>
                     </li>
                 </ul>
             </div>

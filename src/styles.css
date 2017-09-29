@@ -32,9 +32,38 @@ nav div{
     margin-right: 10px;
 }
 
-.breach-chart {
-    height: 500px;
+.mb-3 {
+    padding: 15px;
 }
+
+@media (max-width: 1199px) {
+    .breach-chart {
+        height: 500px;
+    }
+    .mr-4 {
+        font-size: .7em
+    }
+}
+
+@media (min-width: 1200px) {
+    .breach-chart {
+        height: 70vh;
+    }
+
+    .chart-container
+    {
+        max-width: unset !important;
+    }
+
+    .container 
+    {
+        max-width: unset !important;
+    }
+    .right-side {
+        margin-right: 25px;
+    }
+}
+
 
 /* primary button */
 .btn-calculate {
@@ -87,4 +116,25 @@ a:hover {
 /* selected link */
 a:active {
     color: blue;
+}
+
+.listFormulaName {
+    font-size: 1em;
+}
+.listFormulaValue {
+    font-size: .7em;
+    text-indent: 10px;
+    margin-bottom: 5px;
+}
+
+li {
+    line-height: 15px;
+}
+.card-body {
+    padding: .5rem !important;
+}
+
+.row {
+    margin-right: unset !important;
+    margin-left: unset !important;
 }

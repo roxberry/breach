@@ -8,13 +8,14 @@
         <a class="navbar-brand" href="#"><img src="assets/img/logo.png" class="logo d-inline-block align-top"/>BREACH</a>
     </div>
   </nav>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-4 hidden-md-down">
-      <breach-formulae></breach-formulae>
-    </div>
-    <div class="col-12 col-lg-8">
-      <breach-chart></breach-chart>
-    </div>
+<div class="container chart-container">
+
+  <div class="row flex-column-reverse flex-md-row">
+      <div class="col-md-3 hidden-md-down left-side">
+          <breach-formulae></breach-formulae>
+        </div>
+      <div class="col-md-9">
+          <breach-chart></breach-chart>
+      </div>
   </div>
 </div>

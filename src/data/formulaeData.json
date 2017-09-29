@@ -1,53 +1,118 @@
 [
     {
         "formulaUid": 0,
-        "formulaValue": "Qp = 19.1(Hw)^1.85",
-        "formulaName": "U.S. Bureau of Reclamation (1982)",
-        "heightLabel": "Hw",
+        "formulaValue": "Q<sub>p</sub> = 19.1(H<sub>w</sub>)<sup>1.85</sup>",
+        "formulaName": "U.S. Bureau of Reclamation (1982) (H<sub>w</sub>)",
+        "heightLabel": "H<sub>w</sub>",
         "variables" : { "usesHeight" : true},
-        "datasetPath": "bureauOfReclamationData"
+        "datasetPath": "bureauOfReclamationData", 
+        "active": true
     },
     {
         "formulaUid": 1,
-        "formulaValue": "Qp = 1.154(Vw * Hw)^0.412",
-        "formulaName": "MacDonald & Langridge (1984) 412",
-        "heightLabel": "Hw",
-        "volumeLabel": "Vw",
+        "formulaValue": "Q<sub>p</sub> = 1.154(V<sub>w</sub> * H<sub>w</sub>)<sup>0.412</sup>",
+        "formulaName": "MacDonald & Langridge (1984) (H<sub>w</sub>, V<sub>w</sub>)",
+        "heightLabel": "H<sub>w</sub>",
+        "volumeLabel": "V<sub>w</sub>",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "macDonaldLangridge"
+        "datasetPath": "macDonaldLangridge", 
+        "active": true
     },
     {
         "formulaUid": 2,
-        "formulaValue": "Qp = 3.85(Vw * Hw)^0.411",
-        "formulaName": "MacDonald & Langridge (1984) 411",
-        "heightLabel": "Hw",
-        "volumeLabel": "Vw",
+        "formulaValue": "Q<sub>p</sub> = 3.85(V<sub>w</sub> * H<sub>w</sub>)<sup>0.411</sup>",
+        "formulaName": "MacDonald & Langridge (1984) (H<sub>w</sub>, V<sub>w</sub>)",
+        "heightLabel": "H<sub>w</sub>",
+        "volumeLabel": "V<sub>w</sub>",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "macDonaldLangridge"
+        "datasetPath": "macDonaldLangridge", 
+        "active": true
     },
     {
         "formulaUid": 3,
-        "formulaValue": "Qp=13.4(Hd)^1.89",
-        "formulaName": "Singh and Snorrason (1982) Height",
-        "heightLabel": "Hd",        
+        "formulaValue": "Q<sub>p</sub>=13.4(H<sub>d</sub>)<sup>1.89</sup>",
+        "formulaName": "Singh and Snorrason (1982) (H<sub>d</sub>)",
+        "heightLabel": "H<sub>d</sub>",        
         "variables" : { "usesHeight" : true},
-        "datasetPath": "singhAndSnorrason1"
+        "datasetPath": "singhAndSnorrason1", 
+        "active": true
     },
     {
         "formulaUid": 4,
-        "formulaValue": "Qp=1.776(S)^0.47",
-        "formulaName": "Singh and Snorrason (1982) Storage",
+        "formulaValue": "Q<sub>p</sub>=1.776(S)<sup>0.47</sup>",
+        "formulaName": "Singh and Snorrason (1982) (S)",
         "storageLabel": "S",
         "variables" : { "usesStorage": true},
-        "datasetPath": "singhAndSnorrason2"
+        "datasetPath": "singhAndSnorrason2", 
+        "active": true
     },
     {
         "formulaUid": 5,
-        "formulaValue": "Qp=0.607(Vw^0.295*Hw^1.24)",
-        "formulaName": "Froehlick (1995)",
-        "heightLabel": "Hw",
-        "volumeLabel": "Vw",
+        "formulaValue": "Q<sub>p</sub>=0.607(V<sub>w</sub><sup>0.295</sup>*H<sub>w</sub><sup>1.24</sup>)",
+        "formulaName": "Froehlick (1995) (H<sub>w</sub>, V<sub>w</sub>)",
+        "heightLabel": "H<sub>w</sub>",
+        "volumeLabel": "V<sub>w</sub>",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "froehlick"
+        "datasetPath": "froehlick", 
+        "active": true
+    },
+    {
+        "formulaUid": 6,
+        "formulaValue": "Q<sub>p</sub>=0.863(V<sup>0.335</sup> * H<sup>1.833</sup> * W<sup>-0.663</sup>)",
+        "formulaName": "Pierce et al. (2010) (W, V)",
+        "widthLabel": "W",
+        "volumeLabel": "V",
+        "variables" : { "usesWidth": true, "usesVolume": true},
+        "datasetPath": "thortonPierce", 
+        "active": true
+    },
+    {
+        "formulaUid": 7,
+        "formulaValue": "Q<sub>p</sub>=0.863(V<sup>0.335</sup> * H<sup>1.833</sup> * W<sup>-0.663</sup>)",
+        "formulaName": "Pierce et al. (2010) (H, W)",
+        "heightLabel": "H",
+        "widthLabel": "W",
+        "variables" : { "usesHeight": true, "usesWidth": true},
+        "datasetPath": "thortonPierce", 
+        "active": true
+    },
+    {
+        "formulaUid": 8,
+        "formulaValue": "Q<sub>p</sub>=0.12(V<sup>0.493</sup> * H<sup>1.205</sup> * L<sup>0.226</sup>)",
+        "formulaName": "Pierce et al. (2010) (L, V)",
+        "lengthLabel": "L",
+        "volumeLabel": "V",
+        "variables" : { "usesLength": true, "usesVolume": true},
+        "datasetPath": "thortonPierce2", 
+        "active": true
+    },
+    {
+        "formulaUid": 9,
+        "formulaValue": "Q<sub>p</sub>=0.12(V<sup>0.493</sup> * H<sup>1.205</sup> * L<sup>0.226</sup>)",
+        "formulaName": "Pierce et al. (2010) (H, V)",
+        "heightLabel": "H",
+        "volumeLabel": "V",
+        "variables" : { "usesHeight": true, "usesVolume": true},
+        "datasetPath": "thortonPierce2", 
+        "active": true
+    },
+    {
+        "formulaUid": 10,
+        "formulaValue": "Q<sub>p</sub>=0.12(V<sup>0.493</sup> * H<sup>1.205</sup> * L<sup>0.226</sup>)",
+        "formulaName": "Pierce et al. (2010) (H, L)",
+        "lengthLabel": "L",
+        "heightLabel": "H",
+        "variables" : { "usesLength": true, "usesHeight": true},
+        "datasetPath": "thortonPierce2", 
+        "active": true
+    },
+    {
+        "formulaUid": 12,
+        "formulaValue": "Q<sub>p</sub>=0.1202(L)<sup>1.7856</sup>",
+        "formulaName": "Pierce et al. (2010) (L)",
+        "lengthLabel": "L",
+        "variables" : { "usesLength": true},
+        "datasetPath": "thortonPierce2", 
+        "active": true
     }
 ]

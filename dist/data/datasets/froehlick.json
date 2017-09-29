@@ -1,0 +1,235 @@
+{
+    "datasets": [
+        {
+            "label": "Froehlick (1995)",
+            "data": [
+                {
+                  "damId": 1,
+                  "dam": "Apishapa, Colorado",
+                  "Qp": 6850,
+                  "normalizedQp": 0.136008469,
+                  "volume": 22200000,
+                  "normalizedVolume": -0.197359914,
+                  "height": 28,
+                  "normalizedHeight": 0.668033703
+                },
+                {
+                  "damId": 3,
+                  "dam": "Baldwin Hills, California",
+                  "Qp": 1130,
+                  "normalizedQp": -0.282070229,
+                  "volume": 910000,
+                  "normalizedVolume": -0.338733757,
+                  "height": 12.2,
+                  "normalizedHeight": -0.281888633
+                },
+                {
+                  "damId": 13,
+                  "dam": "Butler, Arizona",
+                  "Qp": 810,
+                  "normalizedQp": -0.305459247,
+                  "volume": 2380000,
+                  "normalizedVolume": -0.328972388,
+                  "height": 7.16,
+                  "normalizedHeight": -0.584901834
+                },
+                {
+                  "damId": 15,
+                  "dam": "Castlewood, Colorado",
+                  "Qp": 3570,
+                  "normalizedQp": -0.103728966,
+                  "volume": 6170000,
+                  "normalizedVolume": -0.30380532,
+                  "height": 21.6,
+                  "normalizedHeight": 0.283255035
+                },
+                {
+                  "damId": 37,
+                  "dam": "Fred Burr, Montana",
+                  "Qp": 654,
+                  "normalizedQp": -0.316861393,
+                  "volume": 750000,
+                  "normalizedVolume": -0.339796219,
+                  "height": 10.2,
+                  "normalizedHeight": -0.402131967
+                },
+                {
+                  "damId": 38,
+                  "dam": "French Landing, Michigan",
+                  "Qp": 929,
+                  "normalizedQp": -0.296761456,
+                  "volume": 3870000,
+                  "normalizedVolume": -0.319078211,
+                  "height": 8.53,
+                  "normalizedHeight": -0.502535151
+                },
+                {
+                  "damId": 39,
+                  "dam": "Frenchman Creek, Montana",
+                  "Qp": 1420,
+                  "normalizedQp": -0.260873931,
+                  "volume": 16000000,
+                  "normalizedVolume": -0.238530314,
+                  "height": 10.8,
+                  "normalizedHeight": -0.366058967
+                },
+                {
+                  "damId": 50,
+                  "dam": "Hatchtown, Utah",
+                  "Qp": 3080,
+                  "normalizedQp": -0.1395434,
+                  "volume": 14800000,
+                  "normalizedVolume": -0.246498779,
+                  "height": 16.8,
+                  "normalizedHeight": -0.005328966
+                },
+                {
+                  "damId": 53,
+                  "dam": "Hell Hole, California",
+                  "Qp": 7360,
+                  "normalizedQp": 0.173284716,
+                  "volume": 30600000,
+                  "normalizedVolume": -0.141580661,
+                  "height": 35.1,
+                  "normalizedHeight": 1.094897537
+                },
+                {
+                  "damId": 61,
+                  "dam": "Ireland No. 5, Colorado",
+                  "Qp": 110,
+                  "normalizedQp": -0.356622724,
+                  "volume": 160000,
+                  "normalizedVolume": -0.343714048,
+                  "height": 3.81,
+                  "normalizedHeight": -0.786309418
+                },
+                {
+                  "damId": 67,
+                  "dam": "Kelly Barnes, Georgia",
+                  "Qp": 680,
+                  "normalizedQp": -0.314961036,
+                  "volume": 777000,
+                  "normalizedVolume": -0.339616929,
+                  "height": 11.3,
+                  "normalizedHeight": -0.335998133
+                },
+                {
+                  "damId": 79,
+                  "dam": "Laurel Run, Pennsylvania",
+                  "Qp": 1050,
+                  "normalizedQp": -0.287917483,
+                  "volume": 555000,
+                  "normalizedVolume": -0.341091095,
+                  "height": 14.1,
+                  "normalizedHeight": -0.167657466
+                },
+                {
+                  "damId": 82,
+                  "dam": "Lily Lake, Colorado",
+                  "Qp": 71,
+                  "normalizedQp": -0.35947326,
+                  "volume": 92500,
+                  "normalizedVolume": -0.344162274,
+                  "height": 3.35,
+                  "normalizedHeight": -0.813965385
+                },
+                {
+                  "damId": 83,
+                  "dam": "Little Deer Creek, Utah",
+                  "Qp": 1330,
+                  "normalizedQp": -0.267452093,
+                  "volume": 1360000,
+                  "normalizedVolume": -0.335745583,
+                  "height": 22.9,
+                  "normalizedHeight": 0.361413202
+                },
+                {
+                  "damId": 87,
+                  "dam": "Lower Latham, Colorado",
+                  "Qp": 340,
+                  "normalizedQp": -0.339811867,
+                  "volume": 7080000,
+                  "normalizedVolume": -0.297762568,
+                  "height": 5.79,
+                  "normalizedHeight": -0.667268518
+                },
+                {
+                  "damId": 89,
+                  "dam": "Lower Two Medicine, Montana",
+                  "Qp": 1800,
+                  "normalizedQp": -0.233099472,
+                  "volume": 29600000,
+                  "normalizedVolume": -0.148221048,
+                  "height": 11.3,
+                  "normalizedHeight": -0.335998133
+                },
+                {
+                  "damId": 106,
+                  "dam": "Oros, Brazil",
+                  "Qp": 9630,
+                  "normalizedQp": 0.339200563,
+                  "volume": 660000000,
+                  "normalizedVolume": 4.03787904,
+                  "height": 35.8,
+                  "normalizedHeight": 1.136982704
+                },
+                {
+                  "damId": 111,
+                  "dam": "Prospect, Colorado",
+                  "Qp": 116,
+                  "normalizedQp": -0.35618418,
+                  "volume": 3540000,
+                  "normalizedVolume": -0.321269539,
+                  "height": 1.68,
+                  "normalizedHeight": -0.914368568
+                },
+                {
+                  "damId": 112,
+                  "dam": "Puddingstone, California",
+                  "Qp": 480,
+                  "normalizedQp": -0.329579172,
+                  "volume": 617000,
+                  "normalizedVolume": -0.340679391,
+                  "height": 15.2,
+                  "normalizedHeight": -0.101523633
+                },
+                {
+                  "damId": 114,
+                  "dam": "Quail Creek, Utah",
+                  "Qp": 3110,
+                  "normalizedQp": -0.13735068,
+                  "volume": 30800000,
+                  "normalizedVolume": -0.140252584,
+                  "height": 16.7,
+                  "normalizedHeight": -0.011341133
+                },
+                {
+                  "damId": 129,
+                  "dam": "South Fork Tributary, Pennsylvania",
+                  "Qp": 122,
+                  "normalizedQp": -0.355745636,
+                  "volume": 3700,
+                  "normalizedVolume": -0.34475194,
+                  "height": 1.83,
+                  "normalizedHeight": -0.905350318
+                },
+                {
+                  "damId": 134,
+                  "dam": "Teton, Idaho",
+                  "Qp": 65120,
+                  "normalizedQp": 4.395002476,
+                  "volume": 310000000,
+                  "normalizedVolume": 1.713743521,
+                  "height": 77.4,
+                  "normalizedHeight": 3.638044044
+                }
+              ],
+            "showLine": false,
+            "pointStyle": "circle",
+            "pointRadius": 5,
+            "pointBackgroundColor": "rgb(0, 204, 0)",
+            "backgroundColor": "rgb(0, 204, 0)",            
+            "borderColor": "rgb(0, 204, 0)"
+        }
+    ]
+}
