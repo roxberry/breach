@@ -33,11 +33,16 @@ export class FormulaeComponent implements OnInit {
                 {
                     formulae[i].formulaValue = this.sanitizer.bypassSecurityTrustHtml(formulae[i].formulaValue);
                     formulae[i].formulaName = this.sanitizer.bypassSecurityTrustHtml(formulae[i].formulaName);
+                    formulae[i].variables.heightUom= this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.heightUom);  
                     formulae[i].variables.heightLabel = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.heightLabel);
                     formulae[i].variables.volumeLabel = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.volumeLabel);
+                    formulae[i].variables.volumeUom = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.volumeUom);
                     formulae[i].variables.widthLabel = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.widthLabel);
+                    formulae[i].variables.widthUom = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.widthUom);
                     formulae[i].variables.storageLabel = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.storageLabel);
+                    formulae[i].variables.storageUom = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.storageUom);
                     formulae[i].variables.lengthLabel = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.lengthLabel);
+                    formulae[i].variables.lengthUom = this.sanitizer.bypassSecurityTrustHtml(formulae[i].variables.lengthUom);
                 }
                 this.formulae = formulae
             }

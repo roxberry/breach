@@ -3,6 +3,7 @@ Web application for dam breach analytics
 
 ## Deploy
 Run `nvm 8.3`
+Run `ng build --aot --prod --progress false --base-href "https://roxberry.github.io/breach/"`
 Run `ngh --message==''` with a message to deploy to github.
 
 ## Development server

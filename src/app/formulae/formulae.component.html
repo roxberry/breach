@@ -6,22 +6,28 @@
                 <div *ngIf="selectedFormula?.variables.usesVolume" class="input-group input-group-lg mb-2">
                         <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.volumeLabel"></span>
                         <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.volume" placeholder="Volume" aria-label="Volume" aria-describedby="sizing-addon1">
+                        <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.volumeUom"></span>
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesHeight" class="input-group input-group-lg mb-2">
-                        <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.heightLabel"></span>
-                        <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.height" placeholder="Height" aria-label="Height" aria-describedby="sizing-addon1">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.heightLabel"></span>
+                    <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.height" placeholder="Height" aria-label="Height" aria-describedby="sizing-addon1">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.heightUom"></span>
+                    
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesStorage" class="input-group input-group-lg mb-2">
                     <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.storageLabel"></span>
                     <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.storage" placeholder="Storage" aria-label="Storage" aria-describedby="sizing-addon1">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.storageUom"></span>
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesWidth" class="input-group input-group-lg mb-2">
                     <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.widthLabel"></span>
                     <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.width" placeholder="Width" aria-label="Width" aria-describedby="sizing-addon1">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.widthUom"></span>                    
                 </div>
                 <div *ngIf="selectedFormula?.variables.usesLength" class="input-group input-group-lg mb-2">
                     <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.lengthLabel"></span>
                     <input type="text" class="form-control"  [(ngModel)]="selectedFormula?.variables.length" placeholder="Length" aria-label="Length" aria-describedby="sizing-addon1">
+                    <span class="input-group-addon" id="sizing-addon1" [innerHtml]="selectedFormula?.lengthUom"></span>                    
                 </div>
                 <div class="input-group input-group-lg mb-2">
                         <span class="input-group-addon" id="sizing-addon1">Q<sub>p</sub></span>

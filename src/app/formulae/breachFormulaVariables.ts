@@ -19,9 +19,14 @@ export class BreachFormulaVariables {
     width: number;
     length: number;
     volumeLabel: any;
+    volumeUom: any;
     heightLabel: any;
+    heightUom: any;
     storageLabel: any;
+    storageUom: any;
     widthLabel: any;
+    widthUom: any;
     lengthLabel: any;
+    lengthUom: any;
 }
   
