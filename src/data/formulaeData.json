@@ -56,13 +56,13 @@
     {
         "formulaUid": 5,
         "formulaValue": "Q<sub>p</sub>=0.607(V<sub>w</sub><sup>0.295</sup>*H<sub>w</sub><sup>1.24</sup>)",
-        "formulaName": "Froehlick (1995) (H<sub>w</sub>, V<sub>w</sub>)",
+        "formulaName": "Froehlich (1995) (H<sub>w</sub>, V<sub>w</sub>)",
         "heightLabel": "H<sub>w</sub>",
         "heightUom": "m",        
         "volumeLabel": "V<sub>w</sub>",
         "volumeUom": "m<sup>3</sup>",
         "variables" : { "usesHeight" : true, "usesVolume": true},
-        "datasetPath": "froehlick", 
+        "datasetPath": "froehlich", 
         "active": true
     },
     {
